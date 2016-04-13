@@ -195,7 +195,7 @@ var Tooltipped = function (_React$Component2) {
 }(React.Component);
 
 Tooltipped.propTypes = {
-  preferPosition: React.PropTypes.object.isRequired
+  position: React.PropTypes.object.isRequired
 };
 
 var Example = function (_React$Component3) {
@@ -223,55 +223,55 @@ var Example = function (_React$Component3) {
           null,
           'top left'
         ),
-        React.createElement(Tooltipped, { preferPosition: { y: 'top', x: 'left' } }),
+        React.createElement(Tooltipped, { position: { y: 'top', x: 'left' } }),
         React.createElement(
           'h2',
           null,
           'top right'
         ),
-        React.createElement(Tooltipped, { preferPosition: { y: 'top', x: 'right' } }),
+        React.createElement(Tooltipped, { position: { y: 'top', x: 'right' } }),
         React.createElement(
           'h2',
           null,
           'top center'
         ),
-        React.createElement(Tooltipped, { preferPosition: { y: 'top', x: 'center' } }),
+        React.createElement(Tooltipped, { position: { y: 'top', x: 'center' } }),
         React.createElement(
           'h2',
           null,
           'bottom left'
         ),
-        React.createElement(Tooltipped, { preferPosition: { y: 'bottom', x: 'left' } }),
+        React.createElement(Tooltipped, { position: { y: 'bottom', x: 'left' } }),
         React.createElement(
           'h2',
           null,
           'bottom right'
         ),
-        React.createElement(Tooltipped, { preferPosition: { y: 'bottom', x: 'right' } }),
+        React.createElement(Tooltipped, { position: { y: 'bottom', x: 'right' } }),
         React.createElement(
           'h2',
           null,
           'bottom center'
         ),
-        React.createElement(Tooltipped, { preferPosition: { y: 'bottom', x: 'center' } }),
+        React.createElement(Tooltipped, { position: { y: 'bottom', x: 'center' } }),
         React.createElement(
           'h2',
           null,
           'center left'
         ),
-        React.createElement(Tooltipped, { preferPosition: { y: 'center', x: 'left' } }),
+        React.createElement(Tooltipped, { position: { y: 'center', x: 'left' } }),
         React.createElement(
           'h2',
           null,
           'center right'
         ),
-        React.createElement(Tooltipped, { preferPosition: { y: 'center', x: 'right' } }),
+        React.createElement(Tooltipped, { position: { y: 'center', x: 'right' } }),
         React.createElement(
           'h2',
           null,
           'center center'
         ),
-        React.createElement(Tooltipped, { preferPosition: { y: 'center', x: 'center' } })
+        React.createElement(Tooltipped, { position: { y: 'center', x: 'center' } })
       );
     }
   }]);
@@ -1680,7 +1680,9 @@ var Popover = function (_React$Component) {
       var rect = this.getAnchorBounds();
       var body = this.getBodySize();
 
-      var position = this.props.preferPosition || { x: 'left', y: 'bottom' };
+      if (this.props.position) return this.props.position;
+
+      var position = { x: 'left', y: 'bottom' };
 
       if (rect.bottom + body.height >= docbounds.bottom) {
         position.y = 'top';
@@ -1779,7 +1781,7 @@ Popover.propTypes = {
   children: React.PropTypes.node,
   around: React.PropTypes.node.isRequired,
   open: React.PropTypes.bool.isRequired,
-  preferPosition: React.PropTypes.object
+  position: React.PropTypes.object
 };
 
 

@@ -18,7 +18,7 @@ class Button extends React.Component {
 
 class Tooltipped extends React.Component {
   static propTypes = {
-    preferPosition: React.PropTypes.object.isRequired
+    position: React.PropTypes.object.isRequired
   }
 
   render () {
@@ -39,25 +39,25 @@ class Example extends React.Component {
       <div>
         <h1>tipman</h1>
         <h2>top left</h2>
-        <Tooltipped preferPosition={{ y: 'top', x: 'left' }} />
+        <Tooltipped position={{ y: 'top', x: 'left' }} />
         <h2>top right</h2>
-        <Tooltipped preferPosition={{ y: 'top', x: 'right' }} />
+        <Tooltipped position={{ y: 'top', x: 'right' }} />
         <h2>top center</h2>
-        <Tooltipped preferPosition={{ y: 'top', x: 'center' }} />
+        <Tooltipped position={{ y: 'top', x: 'center' }} />
 
         <h2>bottom left</h2>
-        <Tooltipped preferPosition={{ y: 'bottom', x: 'left' }} />
+        <Tooltipped position={{ y: 'bottom', x: 'left' }} />
         <h2>bottom right</h2>
-        <Tooltipped preferPosition={{ y: 'bottom', x: 'right' }} />
+        <Tooltipped position={{ y: 'bottom', x: 'right' }} />
         <h2>bottom center</h2>
-        <Tooltipped preferPosition={{ y: 'bottom', x: 'center' }} />
+        <Tooltipped position={{ y: 'bottom', x: 'center' }} />
 
         <h2>center left</h2>
-        <Tooltipped preferPosition={{ y: 'center', x: 'left' }} />
+        <Tooltipped position={{ y: 'center', x: 'left' }} />
         <h2>center right</h2>
-        <Tooltipped preferPosition={{ y: 'center', x: 'right' }} />
+        <Tooltipped position={{ y: 'center', x: 'right' }} />
         <h2>center center</h2>
-        <Tooltipped preferPosition={{ y: 'center', x: 'center' }} />
+        <Tooltipped position={{ y: 'center', x: 'center' }} />
       </div>
     )
   }

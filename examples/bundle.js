@@ -71,6 +71,8 @@ var Tooltip = function (_React$Component) {
       var domNode = ReactDOM.findDOMNode(this);
       domNode.addEventListener('mouseenter', this.onMouseEnter);
       domNode.addEventListener('mouseleave', this.onMouseLeave);
+      domNode.addEventListener('touchstart', this.onMouseEnter);
+      domNode.addEventListener('touchend', this.onMouseLeave);
     }
   }, {
     key: 'componentWillUnmount',
@@ -78,6 +80,8 @@ var Tooltip = function (_React$Component) {
       var domNode = ReactDOM.findDOMNode(this);
       domNode.removeEventListener('mouseenter', this.onMouseEnter);
       domNode.removeEventListener('mouseleave', this.onMouseLeave);
+      domNode.removeEventListener('touchstart', this.onMouseEnter);
+      domNode.removeEventListener('touchend', this.onMouseLeave);
     }
   }, {
     key: 'onMouseEnter',

@@ -21,12 +21,16 @@ class Tooltip extends React.Component {
     const domNode = ReactDOM.findDOMNode(this)
     domNode.addEventListener('mouseenter', this.onMouseEnter)
     domNode.addEventListener('mouseleave', this.onMouseLeave)
+    domNode.addEventListener('touchstart', this.onMouseEnter)
+    domNode.addEventListener('touchend', this.onMouseLeave)
   }
 
   componentWillUnmount () {
     const domNode = ReactDOM.findDOMNode(this)
     domNode.removeEventListener('mouseenter', this.onMouseEnter)
     domNode.removeEventListener('mouseleave', this.onMouseLeave)
+    domNode.removeEventListener('touchstart', this.onMouseEnter)
+    domNode.removeEventListener('touchend', this.onMouseLeave)
   }
 
   onMouseEnter () {

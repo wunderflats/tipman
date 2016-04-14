@@ -1782,17 +1782,10 @@ var Popover = function (_React$Component) {
       var rect = this.getAnchorBounds();
       var body = this.getBodySize();
 
-      if (this.props.position) return this.props.position;
-
-      var position = { x: 'left', y: 'bottom' };
-
-      if (rect.bottom + body.height >= docbounds.bottom) {
-        position.y = 'top';
-      }
-
-      if (rect.right + body.width >= docbounds.right) {
-        position.x = 'right';
-      }
+      var position = Object.assign({
+        x: calculateXPosition(),
+        y: calculateYPosition()
+      }, this.props.position || {});
 
       var values = this.calculatePositionValues(position);
 
@@ -1801,6 +1794,22 @@ var Popover = function (_React$Component) {
       }
 
       return position;
+
+      function calculateXPosition() {
+        if (rect.right + body.width >= docbounds.right) {
+          return 'right';
+        }
+
+        return 'left';
+      }
+
+      function calculateYPosition() {
+        if (rect.bottom + body.height >= docbounds.bottom) {
+          return 'top';
+        }
+
+        return 'bottom';
+      }
     }
   }, {
     key: 'calculatePositionValues',

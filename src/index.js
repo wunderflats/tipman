@@ -42,13 +42,12 @@ class Tooltip extends React.Component {
   }
 
   render () {
-    const { around, children, ...props } = this.props
+    const { children, ...props } = this.props
     const { open } = this.state
 
     return (
       <Popover
         open={open}
-        around={around}
         {...props}
       >
         {children}

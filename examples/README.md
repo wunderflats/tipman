@@ -1,6 +1,6 @@
 # tipman example
 
-[Online demo](https://github.com/wunderflats/tipman/tree/master/examples). To build and view:
+[View in browser](https://cdn.rawgit.com/wunderflats/tipman/master/examples/index.html). To build and view:
 
 ```
 git clone https://github.com/wunderflats/tipman.git

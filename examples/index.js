@@ -18,7 +18,7 @@ class Button extends React.Component {
 
 class Tooltipped extends React.Component {
   static propTypes = {
-    position: React.PropTypes.object.isRequired
+    position: React.PropTypes.object
   }
 
   render () {
@@ -58,6 +58,40 @@ class Example extends React.Component {
         <Tooltipped position={{ y: 'center', x: 'right' }} />
         <h2>center center</h2>
         <Tooltipped position={{ y: 'center', x: 'center' }} />
+
+        <h2>constrainTo 'scrollParent'</h2>
+        <h3>scroll x:</h3>
+        <div style={{ overflow: 'scroll', border: '1px solid black' }}>
+          <div className='scroll-x'>
+            <span style={{ marginRight: 200 }}>
+              <Tooltipped constrainTo='scrollParent' constrainX />
+            </span>
+          </div>
+        </div>
+        <h3>scroll x:</h3>
+        <div style={{ overflow: 'scroll', border: '1px solid black' }}>
+          <div className='scroll-x'>
+            <span style={{ marginLeft: 400 }}>
+              <Tooltipped constrainTo='scrollParent' constrainX />
+            </span>
+          </div>
+        </div>
+        <h3>scroll y:</h3>
+        <div style={{ overflow: 'scroll', border: '1px solid black', height: '6em' }}>
+          <div className='scroll-y'>
+            <div style={{ marginBottom: 200 }}>
+              <Tooltipped constrainTo='scrollParent' constrainY />
+            </div>
+          </div>
+        </div>
+        <h3>scroll y:</h3>
+        <div style={{ overflow: 'scroll', border: '1px solid black', height: '6em' }}>
+          <div className='scroll-y'>
+            <div style={{ marginTop: 400 }}>
+              <Tooltipped constrainTo='scrollParent' constrainY />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

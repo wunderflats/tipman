@@ -48,6 +48,10 @@ The React component against which the tooltip is positioned.
 
 Manually set the position of the tooltip.
 
+#### constrainTo: 'scrollParent'
+
+Make sure the tooltip stays within the bounds of its scroll parent. To constrain `x` and `y`, set `constrainX (bool)` and `constrainY (bool)` props.
+
 ### Styling
 
 Since tipman uses popman under the hood, please refer to [its styling documentation](https://github.com/wunderflats/popman#styling).

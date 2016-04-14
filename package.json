@@ -1,6 +1,6 @@
 {
   "name": "tipman",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Tooltip component for React",
   "main": "dist/index.js",
   "scripts": {

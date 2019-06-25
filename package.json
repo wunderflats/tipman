@@ -7,7 +7,7 @@
     "build": "mkdirp dist && babel src/index.js -o dist/index.js",
     "build:examples": "browserify -t babelify examples/index.js -o examples/bundle.js",
     "build:all": "npm run build && npm run build:examples",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No tests specified\"",
     "format": "prettier \"src/*.js\" --write",
     "lint": "eslint src",
     "prepublish": "npm run build && npm run build:examples"
@@ -57,6 +57,6 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "popman": "^2.0.0"
+    "popman": "^2.0.2"
   }
 }
